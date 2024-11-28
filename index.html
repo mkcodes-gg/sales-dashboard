@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.0.5/css/scroller.dataTables.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/scroller/2.0.5/js/dataTables.scroller.min.js"></script>
+    <!-- Underscore.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <nav>
+        <h1>SALES DASHBOARD</h1>
+    </nav>
+    <div class="container">
+        <div class="metrics">
+            <div class="metric-item">
+                <h3>Total Revenue</h3>
+                <p id="total-revenue">$0.00</p>
+            </div>
+            <div class="metric-item">
+                <h3>Total Sales</h3>
+                <p id="total-sales">0</p>
+            </div>
+            <div class="metric-item">
+                <h3>Average Discount</h3>
+                <p id="avg-discount">0.00%</p>
+            </div>
+        </div>
+
+         <div class="chart-container">
+            <svg id="sales-chart"></svg>
+        </div>
+        
+        <div class="filters">
+            <select id="year">
+                <option value="">Year</option>
+            </select>
+            <select id="month">
+                <option value="">Month</option>
+            </select>
+            <select id="city">
+                <option value="">City</option>
+            </select>
+            <select id="customer">
+                <option value="">Customer</option>
+            </select>
+        </div>
+        
+        <div class="table-container">
+            <table id="data-table" class="display">
+                <thead>
+                    <tr>
+                        <th>YEAR</th>
+                        <th>MONTH</th>
+                        <th>DAY</th>
+                        <th>Customer</th>
+                        <th>Customer Description</th>
+                        <th>City</th>
+                        <th>Salesorg</th>
+                        <th>Country</th>
+                        <th>Order Number</th>
+                        <th>Order Item</th>
+                        <th>Product</th>
+                        <th>Product Description</th>
+                        <th>Product Category</th>
+                        <th>Division</th>
+                        <th>SalesQuantity</th>
+                        <th>Unit of Measure</th>
+                        <th>Revenue</th>
+                        <th>Currency</th>
+                        <th>Discount</th>
+                        <th>Cost of Goods Manufactured</th>
+                        <th>Revenue USD</th>
+                        <th>Discount USD</th>
+                        <th>Cogm USD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
